@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1>Cadastro</h1>
+        <h1>Vsualização</h1>
     </div>    
     
 
@@ -21,13 +21,9 @@
 
     
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <form name="form" id="form" action="{% if db%}/update/{{db.id}}/{%else%}/create/{% endif %}" method="post">
-            {% csrf_token %}
-        <div class="forma-group mt-4">Modelo {{form.modelo}}</div>
-        <div class="forma-group mt-4">Marca {{form.marca}}</div>
-        <div class="forma-group mt-4">Ano {{form.ano}}</div>
-        <input type="submit" class="btn btn-success" value="Salvar">
-    </form>
+        <strong>Modelo: </strong>{{db.modelo}}<br>
+        <strong>Marca: </strong>{{db.marca}}<br>
+        <strong>Ano: </strong>{{db.ano}}<br>
     </div>
 
 
